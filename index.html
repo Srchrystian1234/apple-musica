@@ -5,10 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> <!-- puxa os links do icons-->
 </head>
 <body>
-        <img src="images/capa.jpg" alt="">
-
+    <!-- vamos colocar um cara que vai abraçar todos os elementos da pagina,pq eu quero que funcione como um aplicativozinho-->
+        <div class="container-aplicativo">
+            <img src="images/capa.jpg" alt="">
+            <div id="informacoes-faixa">
+                <p id="musica">Musica 1</p>
+                <p id="nome-autor">Henrique e Juliano</p>
+            </div>
+            <div id="container-botoes"><!-- fazendo a junção dos botoes pq ele vao ficar juntos-->
+                <button id="anterior" class="bi bi-skip-backward-fill"></button> <!--vamos colocar os icones do voltar e play e avançar-->
+                <button id="play-pause" class="bi bi-play-circle-fill"></button>
+                <button id="proximo" class="bi bi-skip-forward"></button>
+            </div>
+    </div>
     <script src="musica.js"></script>
 </body>
 </html>
