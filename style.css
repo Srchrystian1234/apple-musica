@@ -37,6 +37,7 @@ button {
 }
 #anterior, #proximo{
     font-size: 3em; /* aumentando os botao pra ficar no padrao */
+    cursor: pointer;
 }
 #play-pause {
     font-size: 4em;
