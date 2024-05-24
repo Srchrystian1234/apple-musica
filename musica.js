@@ -26,9 +26,9 @@ function tocarFaixa(){ /* criei uma funcao tocarfaixa*/
 function pausarFaixa(){ /* funcao de pause*/
     audioMusica.pause(); /* mandando a musica pausar*/
     /* aqui vai ser a mesma coisa do primeiro ,so que vai colcoar em botao de play quano estiver parado*/
-    botaoPlayPause.classList.remove('bi-pause-circle-fill') 
+    botaoPlayPause.classList.remove('bi-pause-circle-fill') /* remove a tecla de pause */
 
-    botaoPlayPause.classList.add('bi-play-circle-fill')
+    botaoPlayPause.classList.add('bi-play-circle-fill') /* colcoar a tecla play*/
     
 }
 
@@ -41,18 +41,21 @@ function tocarOuPausar(){
     }else { /* se nao vou colocar ela pra pausar,se no caso ela estiver tocando*/
         pausarFaixa(); /* funcao de pausar*/
         
-        taTocando = 0;
+        taTocando = 0;/* colando pra zero ,pos nao esta tocando*/
     }
     /* com iss dentro dessa funcao consigo pausar e da play*/
 } 
-/* vamos criar uma função proxima faixa*/
-function trocarNomeFaixa(){
-    var musica1 = "fazendo falta/Dor desse amor"
+/* criando uma funcao para troca o nome das musica*/
+function trocarNomeFaixa(){ /* criando uma funcao para troca o nome assim que trocar de faixa*/
+/* primeiro criando um array para fazer a contagem */
+    var musica1 = "fazendo falta/Dor desse amor" 
     var musica2 = 'Patio do posto'
     var musica3 = 'rancorosa'
     var NomeMusical = [ ,musica1,musica2,musica3]
-    nomeMusica.innerHTML = `${NomeMusical[musicaAtual]}`
+    nomeMusica.innerHTML = `${NomeMusical[musicaAtual]}` /* aqui so faço trocar*/
 }
+
+/* vamos criar uma função proxima faixa*/
 function proximaFaixa(){
     /*se por acaso eu estive no ultimo capilo quero que volte pro primeiro*/
     if(musicaAtual === numeroMusicas){ /* vou fazer ele voltar pro capitulo 1*/
@@ -67,25 +70,25 @@ function proximaFaixa(){
     tocarFaixa();
     taTocando = 1; /* colocar o 1 pq mesmo que ele ja esta com 1 ela vai substituir pleo 1 tambem*/
     /* pq quando estive tocando precisa esta no 1 */
-    trocarNomeFaixa()
+    trocarNomeFaixa(); /* adicionei aqui pra fazer a chamda das troca de faixa*/
     
 }
-function voltarFaixar(){
+function voltarFaixar(){ /* mesmo exemplo de cima , so fiz fazer alguns exemplos*/
     if(musicaAtual === 1 ){
         musicaAtual = numeroMusicas
     }else(
         musicaAtual--
     )
     audioMusica.src =`./books/${musicaAtual}.mp3` 
-    tocarFaixa();
+    tocarFaixa(); /* aqui tambem super importante colcoar o taTocando =0 pra ficar sicronizado com o tocaou pausar*/
     taTocando = 0
-    trocarNomeFaixa()
+    trocarNomeFaixa() /* adicionei aqui pra fazer a chamda das troca de faixa*/
 }
 
 botaoPlayPause.addEventListener('click', tocarOuPausar)/* forma feita pelo addEventListener*/
 /* fiz a chamada do audio pelo botao play com addeventlister*/
 /* adicionei a funcao aqui dentro desse evento de tocar ou pausar , eu nao passei as outra funções, somente a de tocarOuPausar*/
 
-proxima.addEventListener('click',proximaFaixa)
+proxima.addEventListener('click',proximaFaixa) /* chamanda o click da funcao de avançar proxima musica */
 
-voltar.addEventListener('click',voltarFaixar)
+voltar.addEventListener('click',voltarFaixar) /* chamda a funcao de troca ora tras*/
