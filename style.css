@@ -1,14 +1,18 @@
-body{
-    background-image: linear-gradient(#3b1566, #5f4da8);
+@import url('https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap');
+
+body#corpo{
+    background-color: black;
     height: 100vh;
     display: flex;
    justify-content: center;
     flex-direction: column;
     align-items: center;
     color: #d6d6ea;
+    transition: all 1s ease;
+    
 }
 img{
-    width: 400px;
+    width: 500px;
     height: 300px;
 }
 .container-aplicativo {
@@ -34,6 +38,7 @@ button {
     align-items: center;
     margin: 2em 0 1rem 0;
     font-size: 1.5em;
+    font-family: "Reddit Mono", monospace;
 }
 #anterior, #proximo{
     font-size: 3em; /* aumentando os botao pra ficar no padrao */

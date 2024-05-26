@@ -1,12 +1,13 @@
 const botaoPlayPause = window.document.getElementById('play-pause'); /*chamei play pra dentro do javascript com nome botaoplay*/
-const proxima = window.document.getElementById('proximo')
-const voltar = window.document.getElementById('anterior')
-const nomeMusica = window.document.getElementById('musica')
-
+const proxima = window.document.getElementById('proximo') // cahmada do botao proximo
+const voltar = window.document.getElementById('anterior') // chamando o botao anterior
+const nomeMusica = window.document.getElementById('musica') // chamando os nomes das musicas 
+const imagen = window.document.getElementById('photo') // chamado as fotos
+const corpo = window.document.getElementById('corpo')
 const audioMusica = window.document.getElementById('audio-musica') /* chamei a tag audio pelo id*/
 
 
-const numeroMusicas = 3;
+const numeroMusicas = 3; /* quantidade de musicas */
 /*vamos fazer assim para a musica tocando 1 ,caso nao 0*/
 let taTocando = 0;
 
@@ -48,11 +49,33 @@ function tocarOuPausar(){
 /* criando uma funcao para troca o nome das musica*/
 function trocarNomeFaixa(){ /* criando uma funcao para troca o nome assim que trocar de faixa*/
 /* primeiro criando um array para fazer a contagem */
-    var musica1 = "fazendo falta/Dor desse amor" 
-    var musica2 = 'Patio do posto'
-    var musica3 = 'rancorosa'
-    var NomeMusical = [ ,musica1,musica2,musica3]
-    nomeMusica.innerHTML = `${NomeMusical[musicaAtual]}` /* aqui so faço trocar*/
+    /*coloquei em um object o name(nome da musica) e o imagem(as imagens da musica)*/
+    var musica1 ={ //musica 1 nome e imagem
+        name:"Tô Fazendo falta/Dor desse amor" ,
+        imagem: src = 'images/Fazendo-falta.jpg' /* criei essa tag var imagem pra passar uma src */,
+        background: backgroundImage = 'linear-gradient(to left,#0D0D0D,#8C3503,#BF755A,#0D0D0D)' 
+    } 
+    var musica2 ={ // mesmo procedimento do primeiro
+        name:'Patio do posto',
+        imagem: src = 'images/patio-posto.jpg',
+        background : backgroundImage = 'linear-gradient(to right,#0A0F09,#171E26,#3D282D,#31242E)'
+    } 
+    var musica3 ={ //mesmo do primeiro
+        name:'Rancorosa',
+        imagem: src = 'images/rancorosa.jpg',
+        background : backgroundImage = 'linear-gradient(to right,#BF0426,#591D28,#26261D,#BF8A8A)'
+    } 
+    // dei uma virgula a mais pq nao contamos zero nesse 
+    var NomeMusical = [ ,musica1.name,musica2.name,musica3.name] //coloquei os nome das musicas dentro do array
+    var Photo = [,musica1.imagem,musica2.imagem,musica3.imagem] // as fotos dentro de array tambem
+    var degrade = [,musica1.background,musica2.background,musica3.background]
+    nomeMusica.innerHTML = `${NomeMusical[musicaAtual]}` /* aqui so faço trocar dos nomes*/
+    imagen.src = Photo[musicaAtual] // fiz um id na imagem do html e chamei pra e depois fiz as trocas da imagens com musical atual
+    corpo.style.transition = 'all 1s ease'
+    corpo.style.backgroundImage = degrade[musicaAtual]
+    
+    
+    
 }
 
 /* vamos criar uma função proxima faixa*/
