@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap');
-
+*{
+padding: 0;
+margin: 0;
+}
 body#corpo{
-    background-color: black;
+    background-image: url(images/Fazendo-falta.jpg);
     height: 100vh;
     display: flex;
    justify-content: center;
@@ -9,6 +12,7 @@ body#corpo{
     align-items: center;
     color: #d6d6ea;
     transition: all 1s ease;
+    backdrop-filter: blur(10px);
     
 }
 img{
@@ -19,7 +23,12 @@ img{
     display: flex; /*dieixnado tudo centralizado e com cara de pp*/
     flex-direction: column;
     align-items: center;
+    
+    padding: 20px;
+
+    backdrop-filter: blur(20px);
 }
+
 
 button {
     background-color: inherit;
@@ -39,6 +48,7 @@ button {
     margin: 2em 0 1rem 0;
     font-size: 1.5em;
     font-family: "Reddit Mono", monospace;
+    line-height: 50px;
 }
 #anterior, #proximo{
     font-size: 3em; /* aumentando os botao pra ficar no padrao */

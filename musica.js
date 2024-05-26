@@ -53,17 +53,17 @@ function trocarNomeFaixa(){ /* criando uma funcao para troca o nome assim que tr
     var musica1 ={ //musica 1 nome e imagem
         name:"Tô Fazendo falta/Dor desse amor" ,
         imagem: src = 'images/Fazendo-falta.jpg' /* criei essa tag var imagem pra passar uma src */,
-        background: backgroundImage = 'linear-gradient(to left,#0D0D0D,#8C3503,#BF755A,#0D0D0D)' 
+        background: backgroundImage = 'url(images/Fazendo-falta.jpg)' 
     } 
     var musica2 ={ // mesmo procedimento do primeiro
         name:'Patio do posto',
         imagem: src = 'images/patio-posto.jpg',
-        background : backgroundImage = 'linear-gradient(to right,#0A0F09,#171E26,#3D282D,#31242E)'
+        background : backgroundImage = 'url(images/patio-posto.jpg)'
     } 
     var musica3 ={ //mesmo do primeiro
         name:'Rancorosa',
         imagem: src = 'images/rancorosa.jpg',
-        background : backgroundImage = 'linear-gradient(to right,#BF0426,#591D28,#26261D,#BF8A8A)'
+        background : backgroundImage = 'url(images/rancorosa.jpg)'
     } 
     // dei uma virgula a mais pq nao contamos zero nesse 
     var NomeMusical = [ ,musica1.name,musica2.name,musica3.name] //coloquei os nome das musicas dentro do array
