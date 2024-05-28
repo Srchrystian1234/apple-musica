@@ -4,32 +4,43 @@ padding: 0;
 margin: 0;
 }
 body#corpo{
-    background-image: url(images/Fazendo-falta.jpg);
-    height: 100vh;
-    display: flex;
-   justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    color: #d6d6ea;
-    transition: all 1s ease;
-    backdrop-filter: blur(10px);
+    background-image: url(images/Fazendo-falta.jpg);/* imagem de fundo*/
+    height: 100vh;/* pega toda site completo*/
+    display: flex;/* é um conteiner de comodando */
+   justify-content: center; /* centralizar com display flex*/
+    flex-direction: column; /* fica em coluna  */
+    align-items: center; /* alinha todo o display*/
+    color: #d6d6ea; /* cor branca na letra*/
+    transition: all 1s ease; /* transição*/
+    backdrop-filter: blur(10px); /* deixar em tudo em basado*/
     
 }
 img{
-    width: 500px;
-    height: 300px;
+    width: 500px;/* tamanho da imagem*/
+    height: 300px;/* tamanho da imagem*/
 }
+.principal-pai{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    gap: 100px 100px;
+}
+
+
 .container-aplicativo {
     display: flex; /*dieixnado tudo centralizado e com cara de pp*/
-    flex-direction: column;
-    align-items: center;
-    
+    flex-direction:column;/* colocar em coluna*/
+    align-items: center; /* centralizar todo display*/
+    justify-content: center;
     padding: 20px;
-
+   
     backdrop-filter: blur(20px);
 }
 
-
+.container-aplicativo > p{
+    width: 500px;
+    
+}
 button {
     background-color: inherit;
     color: inherit;
@@ -37,12 +48,12 @@ button {
 }
 
 .music-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: flex; /* é um conteiner de comodando */
+    flex-direction: column; /* ficar em coluna o display*/
+    align-items: center;/* alinha no centro todo o display*/
 }
 #informacoes-faixa{
-    display: flex;
+    display: flex; /*é um conteiner*/
     flex-direction: column;
     align-items: center;
     margin: 2em 0 1rem 0;
